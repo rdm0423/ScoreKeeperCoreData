@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FFBD34021A9FD97100D50B24 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FFBD34001A9FD97100D50B24 /* Model.xcdatamodeld */; };
+		FFBD34041A9FD9BA00D50B24 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FFBD34031A9FD9BA00D50B24 /* CoreData.framework */; };
+		FFBD34071A9FDA6B00D50B24 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = FFBD34061A9FDA6B00D50B24 /* Player.m */; };
+		FFBD340A1A9FDA6C00D50B24 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = FFBD34091A9FDA6C00D50B24 /* Game.m */; };
+		FFBD340F1A9FDA9D00D50B24 /* Stack.m in Sources */ = {isa = PBXBuildFile; fileRef = FFBD340E1A9FDA9D00D50B24 /* Stack.m */; };
 		FFC43F651A9FD4590013D2AC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC43F641A9FD4590013D2AC /* main.m */; };
 		FFC43F681A9FD4590013D2AC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC43F671A9FD4590013D2AC /* AppDelegate.m */; };
-		FFC43F6B1A9FD4590013D2AC /* ScoreKeeperCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FFC43F691A9FD4590013D2AC /* ScoreKeeperCoreData.xcdatamodeld */; };
 		FFC43F6E1A9FD4590013D2AC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FFC43F6D1A9FD4590013D2AC /* ViewController.m */; };
 		FFC43F711A9FD4590013D2AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFC43F6F1A9FD4590013D2AC /* Main.storyboard */; };
 		FFC43F731A9FD4590013D2AC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFC43F721A9FD4590013D2AC /* Images.xcassets */; };
@@ -28,12 +32,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FFBD34011A9FD97100D50B24 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		FFBD34031A9FD9BA00D50B24 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		FFBD34051A9FDA6B00D50B24 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		FFBD34061A9FDA6B00D50B24 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		FFBD34081A9FDA6C00D50B24 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		FFBD34091A9FDA6C00D50B24 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
+		FFBD340D1A9FDA9D00D50B24 /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
+		FFBD340E1A9FDA9D00D50B24 /* Stack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stack.m; sourceTree = "<group>"; };
 		FFC43F5F1A9FD4590013D2AC /* ScoreKeeperCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScoreKeeperCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFC43F631A9FD4590013D2AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FFC43F641A9FD4590013D2AC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FFC43F661A9FD4590013D2AC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FFC43F671A9FD4590013D2AC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		FFC43F6A1A9FD4590013D2AC /* ScoreKeeperCoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ScoreKeeperCoreData.xcdatamodel; sourceTree = "<group>"; };
 		FFC43F6C1A9FD4590013D2AC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		FFC43F6D1A9FD4590013D2AC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		FFC43F701A9FD4590013D2AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -49,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFBD34041A9FD9BA00D50B24 /* CoreData.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,9 +74,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FFBD340B1A9FDA7200D50B24 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				FFBD34001A9FD97100D50B24 /* Model.xcdatamodeld */,
+				FFBD34081A9FDA6C00D50B24 /* Game.h */,
+				FFBD34091A9FDA6C00D50B24 /* Game.m */,
+				FFBD34051A9FDA6B00D50B24 /* Player.h */,
+				FFBD34061A9FDA6B00D50B24 /* Player.m */,
+				FFBD340C1A9FDA8B00D50B24 /* Stack */,
+			);
+			name = "Core Data";
+			sourceTree = "<group>";
+		};
+		FFBD340C1A9FDA8B00D50B24 /* Stack */ = {
+			isa = PBXGroup;
+			children = (
+				FFBD340D1A9FDA9D00D50B24 /* Stack.h */,
+				FFBD340E1A9FDA9D00D50B24 /* Stack.m */,
+			);
+			name = Stack;
+			sourceTree = "<group>";
+		};
 		FFC43F561A9FD4590013D2AC = {
 			isa = PBXGroup;
 			children = (
+				FFBD34031A9FD9BA00D50B24 /* CoreData.framework */,
 				FFC43F611A9FD4590013D2AC /* ScoreKeeperCoreData */,
 				FFC43F7E1A9FD4590013D2AC /* ScoreKeeperCoreDataTests */,
 				FFC43F601A9FD4590013D2AC /* Products */,
@@ -87,10 +122,10 @@
 				FFC43F671A9FD4590013D2AC /* AppDelegate.m */,
 				FFC43F6C1A9FD4590013D2AC /* ViewController.h */,
 				FFC43F6D1A9FD4590013D2AC /* ViewController.m */,
+				FFBD340B1A9FDA7200D50B24 /* Core Data */,
 				FFC43F6F1A9FD4590013D2AC /* Main.storyboard */,
 				FFC43F721A9FD4590013D2AC /* Images.xcassets */,
 				FFC43F741A9FD4590013D2AC /* LaunchScreen.xib */,
-				FFC43F691A9FD4590013D2AC /* ScoreKeeperCoreData.xcdatamodeld */,
 				FFC43F621A9FD4590013D2AC /* Supporting Files */,
 			);
 			path = ScoreKeeperCoreData;
@@ -222,10 +257,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FFC43F6B1A9FD4590013D2AC /* ScoreKeeperCoreData.xcdatamodeld in Sources */,
 				FFC43F681A9FD4590013D2AC /* AppDelegate.m in Sources */,
+				FFBD340F1A9FDA9D00D50B24 /* Stack.m in Sources */,
 				FFC43F6E1A9FD4590013D2AC /* ViewController.m in Sources */,
 				FFC43F651A9FD4590013D2AC /* main.m in Sources */,
+				FFBD340A1A9FDA6C00D50B24 /* Game.m in Sources */,
+				FFBD34021A9FD97100D50B24 /* Model.xcdatamodeld in Sources */,
+				FFBD34071A9FDA6B00D50B24 /* Player.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +454,7 @@
 				FFC43F871A9FD4590013D2AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FFC43F881A9FD4590013D2AC /* Build configuration list for PBXNativeTarget "ScoreKeeperCoreDataTests" */ = {
 			isa = XCConfigurationList;
@@ -424,17 +463,18 @@
 				FFC43F8A1A9FD4590013D2AC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		FFC43F691A9FD4590013D2AC /* ScoreKeeperCoreData.xcdatamodeld */ = {
+		FFBD34001A9FD97100D50B24 /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				FFC43F6A1A9FD4590013D2AC /* ScoreKeeperCoreData.xcdatamodel */,
+				FFBD34011A9FD97100D50B24 /* Model.xcdatamodel */,
 			);
-			currentVersion = FFC43F6A1A9FD4590013D2AC /* ScoreKeeperCoreData.xcdatamodel */;
-			path = ScoreKeeperCoreData.xcdatamodeld;
+			currentVersion = FFBD34011A9FD97100D50B24 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
