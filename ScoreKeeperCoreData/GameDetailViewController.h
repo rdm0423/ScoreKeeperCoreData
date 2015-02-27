@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "GameController.h"
 
 @interface GameDetailViewController : UIViewController
+
+@property (nonatomic, strong) Game *game;
+
+- (void)updateWithGame:(Game *)game;
 
 @end

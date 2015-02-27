@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Player.h"
+#import "GameController.h"
 
 @interface ScoreTableViewCell : UITableViewCell
 

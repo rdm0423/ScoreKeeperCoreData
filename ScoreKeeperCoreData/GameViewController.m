@@ -8,6 +8,7 @@
 
 #import "GameViewController.h"
 #import "GameDetailViewController.h"
+#import "GameController.h"
 
 @interface GameViewController ()
 
@@ -27,16 +28,22 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self.tableView reloadData];
+}
+
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"addGame"]) {
         GameDetailViewController *gameDetailViewController = segue.destinationViewController;
-        //need update with game method called here
+        
+        [gameDetailViewController updateWithGame:[[GameController sharedInstance] createGameWithTitle:@"Game"]];
     }
     if ([segue.identifier isEqualToString:@"gameTapped"]) {
         UITableViewCell *cell = sender;
         NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
         GameDetailViewController *gameDetailViewController = segue.destinationViewController;
-        //need update with game method called here
+        [gameDetailViewController updateWithGame:[[GameController sharedInstance].games objectAtIndex:indexPath.row]];
     }
 }
 

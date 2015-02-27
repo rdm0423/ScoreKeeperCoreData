@@ -7,10 +7,14 @@
 //
 
 #import "GameDetailViewController.h"
+#import "GameDetailViewDataSource.h"
+#import "GameController.h"
 
 @interface GameDetailViewController ()
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (strong, nonatomic) IBOutlet GameDetailViewDataSource *dataSource;
+
 
 @end
 
@@ -18,11 +22,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
+    self.title = self.game.title;
 }
 
 - (IBAction)addPlayer:(id)sender {
+    [[GameController sharedInstance] addPlayerToGame:self.game];
     
+    [self.dataSource updateWithGame:self.game];
+    
+    [self.tableView reloadData];
+}
+
+- (void)updateWithGame:(Game *)game {
+    self.game = game;
+    [self.dataSource updateWithGame:game];
 }
 
 

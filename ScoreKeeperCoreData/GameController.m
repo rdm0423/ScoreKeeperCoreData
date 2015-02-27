@@ -44,8 +44,7 @@
 
 - (void)addPlayerToGame:(Game *)game {
     Player *player = [NSEntityDescription insertNewObjectForEntityForName:@"Player" inManagedObjectContext:[Stack sharedInstance].managedObjectContext];
-    
-    player.game = game;
+     [[game.players array] arrayByAddingObject:player];
     
     [self save];
 }

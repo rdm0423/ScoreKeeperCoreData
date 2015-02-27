@@ -21,31 +21,28 @@
                                 <rect key="frame" x="0.0" y="7" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="GHx-x4-lpq">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="gameCell" textLabel="pwO-Xi-mKn" style="IBUITableViewCellStyleDefault" id="5MT-qL-0gw">
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GHx-x4-lpq" id="cQ4-QJ-nAd">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5MT-qL-0gw" id="Umk-a6-0Sr">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Game Name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NBI-3C-lxB">
-                                                    <rect key="frame" x="222" y="7" width="156" height="30"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="156" id="wGm-k7-AhP"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pwO-Xi-mKn">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
-                                            <constraints>
-                                                <constraint firstItem="NBI-3C-lxB" firstAttribute="top" secondItem="cQ4-QJ-nAd" secondAttribute="topMargin" constant="-1" id="8N8-3a-ecl"/>
-                                                <constraint firstItem="NBI-3C-lxB" firstAttribute="centerX" secondItem="cQ4-QJ-nAd" secondAttribute="centerX" id="Xg8-1Y-to4"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="p6C-2O-Dzl" kind="show" identifier="gameTapped" id="8Xb-0b-chg"/>
+                                            <segue destination="p6C-2O-Dzl" kind="show" identifier="gameTapped" id="YhB-W0-ADq"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="340-xz-qMf" id="0Vo-va-i1M"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="UD6-UZ-oMp"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -53,7 +50,7 @@
                     <navigationItem key="navigationItem" id="yXw-9q-7rv">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="aQF-tH-oHO">
                             <connections>
-                                <segue destination="p6C-2O-Dzl" kind="show" id="Qgn-tT-ZrN"/>
+                                <segue destination="p6C-2O-Dzl" kind="show" id="YcP-br-cVH"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -62,6 +59,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <customObject id="340-xz-qMf" customClass="GameTableViewDataSource"/>
             </objects>
             <point key="canvasLocation" x="1351" y="1132"/>
         </scene>
@@ -81,7 +79,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="379-d6-5Kc" customClass="ScoreTableViewCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="scoreCell" id="379-d6-5Kc" customClass="ScoreTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="379-d6-5Kc" id="zUy-cj-tvE">
@@ -128,6 +126,9 @@
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="X1U-ek-kZH" id="Six-hY-qMs"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -140,10 +141,12 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="dataSource" destination="X1U-ek-kZH" id="ueu-w0-q6K"/>
                         <outlet property="tableView" destination="Tzb-aS-KlP" id="jWR-K3-q2k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t2y-lS-JND" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="X1U-ek-kZH" customClass="GameDetailViewDataSource"/>
             </objects>
             <point key="canvasLocation" x="2062" y="1132"/>
         </scene>
@@ -167,6 +170,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="8Xb-0b-chg"/>
+        <segue reference="YhB-W0-ADq"/>
     </inferredMetricsTieBreakers>
 </document>

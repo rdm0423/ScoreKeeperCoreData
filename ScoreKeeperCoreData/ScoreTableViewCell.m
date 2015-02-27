@@ -27,19 +27,30 @@
 }
 
 - (void)updateWithPlayer:(Player *)player {
-    
-    
+    self.player = player;
+    self.playerTextField.text = player.name;
+    self.scoreLabel.text = [player.score stringValue];
+    self.stepper.value = [player.score doubleValue];
 }
 
 
 - (IBAction)textFieldEditingEnded:(id)sender {
+    self.player.name = self.playerTextField.text;
     
-    
+    [[GameController sharedInstance] save];
 }
 
 - (IBAction)stepperTapped:(id)sender {
+    self.scoreLabel.text = [NSString stringWithFormat:@"%.0f", self.stepper.value];
+    self.player.score = [NSNumber numberWithDouble:self.stepper.value];
     
+    [[GameController sharedInstance] save];
+}
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
     
+    return YES;
 }
 
 

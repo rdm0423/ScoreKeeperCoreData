@@ -21,12 +21,9 @@
 
 - (void)updateWithGame:(Game *)game {
     
-    NSMutableArray *players = [NSMutableArray new];
-    for (Player *player in game.players) {
-        [players addObject:player];
-    }
+    
     self.game = game;
-    self.players = players;
+    self.players = [self.game.players array];
     
 }
 
