@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GameController.h"
 
 @interface GameDetailViewDataSource : NSObject
+
+@property (strong, nonatomic) Game *game;
+
+- (void)updateWithGame:(Game *)game;
 
 @end
