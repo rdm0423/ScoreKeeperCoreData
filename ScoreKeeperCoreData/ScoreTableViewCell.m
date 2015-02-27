@@ -10,6 +10,8 @@
 
 @interface ScoreTableViewCell () <UITextFieldDelegate>
 
+@property (nonatomic, strong) Player *player;
+
 @property (weak, nonatomic) IBOutlet UITextField *playerTextField;
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
 @property (weak, nonatomic) IBOutlet UIStepper *stepper;
@@ -23,6 +25,12 @@
 - (void)awakeFromNib {
     // Initialization code
 }
+
+- (void)updateWithPlayer:(Player *)player {
+    
+    
+}
+
 
 - (IBAction)textFieldEditingEnded:(id)sender {
     
